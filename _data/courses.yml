@@ -1,0 +1,10 @@
+- name: Course 1 - Statistical Indicators in Python
+  description: "Statistically-Sound Indicators in Python based on Timothy Masters Statistically Sound Indicators for Financial Market Prediction"
+  sections:
+    - name: Section 1
+      description: "Introduction to Indicators and Smoothing"
+      notebook_url: "/Users/kennethzhang/Desktop/kennethZhangML.github.io/_data/jupyternotebooks/01-Introduction.html"
+    - name: Section 2
+      description: "Maximizing Information Content"
+      notebook_url: "/Users/kennethzhang/Desktop/SoundIndicators/02-MaximizingInformationContent.ipynb"
+
