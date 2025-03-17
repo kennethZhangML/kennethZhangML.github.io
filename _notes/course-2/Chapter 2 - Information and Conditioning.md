@@ -27,9 +27,11 @@ Take the following 4 $\sigma$-algebras:
 	a. containing the information learned by observing the first two coin tosses
 3. $\mathcal{F}_3$ the set of all subsets of $\Omega$ which contains 256 sets
 4. $F_0$ is the trivial $\sigma$-field with two sets:
+
 $$
 \mathcal{F}_0 = \{\emptyset, \Omega\}
 $$
+
 These four $\sigma$-algebras are indexed by time, so, as time moves forward, we obtain the finer resolution. i.e., if $n < m$ then $F_m$ contains every set in $F_n$ and even more. 
 
 ------------------------------------------------------------------------
@@ -50,9 +52,11 @@ It suffices to work with indivisible sets in the $\sigma$-algebra (atoms) and no
 
 Let's say we choose a continuous function $f(u)$ defined only for $0 \le u \le t$ and satisfies $f(0) = 0$.
 The set $\omega \in C_0[0, T]$ that agree with $f$ on $[0, t]$ and that are free to take any values on $(t, T]$ form an atom in $\mathcal{F}(t)$, which we can define as:
+
 $$
 \{\omega \in C_0[0, T]; \omega(u) = f(u) \text{ for all } u \in [0, t]\}
 $$
+
 ------------------------------------------------------------------------
 
 Another way we can observe the evolution over time, is by letting $X$ to be a random variable, and have a formula for this, which we know ahead of time. We are only waiting to learn the value of $\omega$ to substitute into the formula, so we can evaluate $X(\omega)$. 
@@ -78,31 +82,41 @@ When we have a $\sigma$-algebra $\mathcal{G}$ and a random variable $X$ that is 
 We need a probability measure in order to talk about independence. Independence an be affected by changes of probability measure, measurability is not. 
 
 e.g., let's say we have a probability space defined by the triple again, we say that two sets $A$ and $B$ in $\mathcal{F}$ are independent if:
+
 $$
 \mathbb{P}(A \cap B) = \mathbb{P}(A) \cdot \mathbb{P}(B)
 $$
+
 i.e., we have $\Omega = \{HH, HT, TH, TT\}$ with $0 \le p \le 1$ for $q = 1 - p$, 
+
 $$
 \mathbb{P}(HH) = p^2, \mathbb{P}(HT) = pq, \mathbb{P}(TH) = pq, \mathbb{P}(TT) = q^2
 $$
+
 Thus, the sets $A, B$ are independent, meaning that knowing the outcome $\omega$ is in $A$ does not change our estimation of the probability that it is in $B$. If $\omega$ occurs and we know the value of $X(\omega)$ then our estimation of the distribution of $Y$ is the same as when we did not know the value of $X(\omega)$. 
 
 **Definition**: Define a probability space by the triple, and let $\mathcal{G}$ and $\mathcal{H}$ be sub-$\sigma$-algebras of $\mathcal{F}$. We say that two $\sigma$-algebras are independent if, 
+
 $$
 \mathbb{P}(A \cap B) = \mathbb{P}(A) \cdot \mathbb{P}(B), \quad \forall A \in \mathcal{G}, B \in \mathcal{H}
 $$
+
 Let $X, Y$ be random variables on the probability space. We say these two random variables are independent if the $\sigma$-algebras they generate, $\sigma(X)$ and $\sigma(Y)$ are independent. The random variable $X$ is said to be independent of the $\sigma$-algebra $\mathcal{G}$ if $\sigma(X)$ and $\mathcal{G}$ are independent. 
+
 $$
 \mathbb{P} \{X \in C \text{ and } Y \in D\} = \mathbb{P}\{X \in C\} \cdot \mathbb{P}\{Y \in D\}
 $$
+
 for all Borel subsets $C$ and $D$ of $\mathbb{R}$.
 
 ------------------------------------------------------------------------
 
 e.g., let's say we have $\Omega_3$ as our probability space of three independent coin tosses on which the stock price random variables were defined. 
+
 $$
 \mathbb{P}(HHH) = p^3, \mathbb{P} = p^2q, \mathbb{P}(HTH) = p^2q, \mathbb{P}(HTT) = pq^2, \dots, \mathbb{P}(TTT) = q^3
 $$
+
 We see that $S_2$ and $S_3$ are not independent because if we know $S_2$ takes the value 16, then $S_3$ is either 8 or 32, and is not 2 or .50. 
 
 However, if $p = 1$, then after learning that $S_2 = 16$, we do not revise our estimate of the distribution of $S_3$. If $p = 0$, then $S_2$ cannot be 16, and we do not have to worry about revising our estimate of the distribution of $S_3$ if this occurs because it will not occur. 
@@ -110,99 +124,130 @@ However, if $p = 1$, then after learning that $S_2 = 16$, we do not revise our e
 ------------------------------------------------------------------------
 
 **Definition**: Let the probability space be defined by our triple, and let $\mathcal{G_1}, \mathcal{G_2}, \dots$ be a sequence of sub-$\sigma$-algebras of $\mathcal{F}$. For a fixed $n$, we say that the $n$ $\sigma$-algebras $\mathcal{G_1}, \dots \mathcal{G_n}$ are independent if
+
 $$
 \mathbb{P}(A_1 \cap A_2 \cap \dots \cap A_n) = \mathbb{P}(A_1) \cdot \mathbb{P}(A_2) \cdot \dots \cdot \mathbb{P}(A_n)
 $$
+
 for all $A_1 \in \mathcal{G_1}, \dots, A_n \in \mathcal{G_n}$. 
 - Say we have a sequence of random variables on some probability space 
 - The $n$ random variables $X_1, \dots, X_n$ are independent if the $\sigma$-algebras of $\sigma(X_1), \dots $\sigma(X_n)$ are independent. The full sequence of $\sigma$-algebras is independent if for every integer $n$ the $n$ $\sigma$-algebras are independent. 
 
 e.g., take the example where the infinite independent coin toss space exhibits the kind of independence described above. Let $\mathcal{G_k}$ be the $\sigma$-algebra of information associated with the $k$-th toss. $\mathcal{G_k}$ essentially comprises the sets $\emptyset, \Omega_\infty$ and the atoms:
+
 $$
 \{\omega \in \Omega_{\infty}; \omega_k = H\} \quad\text{and}\quad \{\omega \in \Omega_\infty; \omega_k = T\}
 $$
+
 ------------------------------------------------------------------------
 
 **Theorem**: Let $X, Y$ be independent random variables, and $f$ and $g$ be Borel-measurable functions on $\mathbb{R}$. Then $f(X), g(Y)$ are independent random variables. 
 
 The **proof** follows by defining $A$ being generated by $f(X)$ and have every set $A$ in $\sigma(f(X))$ of the form $\{\omega \in \Omega; f(X(\omega)) \in C\}$ where $C$ is the Borel subset of $\mathbb{R}$. Then, after, define $D = \{x\in \mathbb{R}; f(x) \in C\}$ where we can define $A$ now as:
+
 $$
 A = \{\omega \in \Omega; f(X(\omega)) \in C\} = \{\omega \in \Omega, X(\omega) \in D\}
 $$
+
 Since we know that $B$ is the $\sigma$-algebra generated by $g(Y)$, then we have that this $\sigma$-algebra is a sub-$\sigma$-algebra of $\sigma(Y)$ so $B \in \sigma(Y)$ is known. Then we know that $X, Y$ are independent so we have that $\mathbb{P}(A \cap B) = \mathbb{P}(A) \cdot \mathbb{P}(B)$.
 
 ------------------------------------------------------------------------
 **Definition**: Let $X, Y$ be r.v.'s and the pair $(X, Y)$ takes values in the plane $\mathbb{R}^2$ and the **joint distribution measure** of $(X, Y)$ is given by:
+
 $$
 \mu_{X, Y}(C) = \mathbb{P}\{(X, Y) \in C\}, \quad\text{for all Borel Sets } C \subset \mathbb{R}^2
 $$
+
 i.e., assigning measure between 0 and 1 to subsets of $\mathbb{R}^2$ so that $\mu_{X, Y}(\mathbb{R}^2) = 1$
 - countable additivity should also be satisfied 
 The **joint cumulative distribution function** of $f(X, Y)$ is:
+
 $$
 F_{X, Y}(a, b) = \mu_{X, Y}((-\infty, a] \times (-\infty, b]) = \mathbb{P}\{X \le a, Y \le b\}, \quad a \in \mathbb{R}, b \in \mathbb{R}
 $$
+
 A non-negative Borel-measurable function $f_{X, Y} (x, y)$ is a joint density for the pair of random variables $(X, Y)$ if:
+
 $$
 \mu_{X, Y}(C) = \int_{-\infty}^\infty \int_{-\infty}^\infty \mathbb{I}_C(x, y) f_{X, Y}(x, y) dy dx \quad\text{for all Borel Sets } C \subset \mathbb{R}^2
 $$
+
 which holds if and only if:
+
 $$
 F_{X, Y}(a, b) = \int_{-\infty}^a \int_{-\infty}^b f_{X, Y}(x, y) dy dx \quad \text{for all } a \in \mathbb{R}, b \in \mathbb{R}
 $$
+
 **Distribution Measures** often referred to as marginal distribution measures of $X, Y$ are:
+
 $$
 \begin{align*}
 \mu_X(A) = \mathbb{P}\{X \in A\} = \mu_{X, Y}(A \times \mathbb{R}), \text{ for all Borel Subsets } A \subset \mathbb{R}\\
 \mu_Y(A) = \mathbb{P}\{Y \in B\} = \mu_{X, Y}(\mathbb{R} \times B), \text{ for all Borel Subsets } A \subset \mathbb{R}
 \end{align*}
 $$
+
 Thus, the marginal CDF are:
+
 $$
 \begin{align*}
 F_X(a) = \mu_X(-\infty, a] = \mathbb{P}\{X \le a\}, \text{ for all } a \in \mathbb{R}\\
 F_Y(b) = \mu_Y(-\infty, b] = \mathbb{P}\{Y \le b\}, \text{ for all } b \in \mathbb{R}
 \end{align*}
 $$
+
 If the joint density $f_{X, Y}$ exists, then we can say that the marginal densities exist and are given:
+
 $$
 f_X(x) = \int_{-\infty}^\infty f_{X, Y}(x, y) dy \quad\text{and}\quad f_Y(y) = \int_{-\infty}^\infty f_{X, Y}(x, y) dx
 $$
+
 
 ------------------------------------------------------------------------
 **Theorem**: We have $X, Y$ that are random variables, the conditions are equivalent:
 1. $X, Y$ are independent 
 2. The joint distribution measure factors:
+
 $$
 \mu_{X, Y}(A \times B) = \mu_X(A) \cdot \mu_Y(B)
 $$
+
 for all Borel subsets $A \subset \mathbb{R}$ and $B \subset \mathbb{R}$. 
 3. The joint cumulative distribution function factors:
+
 $$
 F_{X, Y}(a, b) = F_X(a) \cdot F_Y(b)
 $$
+
 for all $a \in \mathbb{R}, b \in \mathbb{R}$. 
 4. The join moment-generating function factors:
+
 $$
 \mathbb{E}e^{uX + vY} = \mathbb{E}e^{uX} \cdot \mathbb{E}e^{vY}
 $$
+
 for all $u, v \in \mathbb{R}$ for which the expectations are finite 
 5. The joint-density factors:
+
 $$
 f_{X, Y}(x, y) = f_X(x) \cdot f_Y(y)
 $$
+
 for almost every $x, y \in \mathbb{R}$. 
 The conditions above imply but are not equivalent to:
 6. The expectation factors:
+
 $$
 \mathbb{E}[XY] = \mathbb{E}X \cdot \mathbb{E}Y
 $$
+
 provided that $\mathbb{E} |XY| < \infty$. 
 
 ------------------------------------------------------------------------
 
 **Proof**:
 (i) $\implies$ (ii) Assume that $X$ and $Y$ are independent, then
+
 $$
 \begin{align*}
 \mu_{X, Y}(A \times B) &= \mathbb{P}\{X \in A \text{ and } Y \in B\}\\
@@ -211,9 +256,11 @@ $$
 &= \mu_X(A) \cdot \mu_Y(B)
 \end{align*}
 $$
+
 (ii) $\implies$ (i) is proven similarly, but on the converse. 
 
 (ii) $\implies$ (iii) Assume that $\mu_{X, Y} (A \times B) = \mu_X(A) \cdot \mu_Y(B)$
+
 $$
 \begin{align*}
 F_{X, Y}(a, b) &= \mu_{X, Y} ((-\infty, a] \times (-\infty, b])\\
@@ -221,34 +268,46 @@ F_{X, Y}(a, b) &= \mu_{X, Y} ((-\infty, a] \times (-\infty, b])\\
 &= F_X(a) \cdot F_Y(b)\\
 \end{align*}
 $$
+
 (iii) $\implies$ (ii) holds whenever $A$ is of the form $A = (-\infty, a]$ and $B$ is of the form $B = (-\infty, b]$ which suffices to establish for all Borel Sets $A, B$. 
 
 (iii) $\implies$ (v) If there is a joint density, then $(iii)$ implies
+
 $$
 \begin{align*}
 \int_{-\infty}^a \int_{-\infty}^b f_{X, Y}(x, y) dy dx = \int_{-\infty}^a f_X(x) dx \cdot \int_{-\infty}^b f_Y(y) dy \implies f_{X, Y}(a, b) = f_X(a) \cdot f_Y(b)
 \end{align*}
 $$
+
 other proofs for other implications follow similarly.
 
 Assume there is a joint density, if we also assume the above, we can integrate both sides to get:
+
 $$
 F_{X, Y}(a, b) = \int_{-\infty}^a \int_{-\infty}^b f_{X, Y}(x, y) dy dx \implies \int_{-\infty}^a f_X(x) dx \cdot \int_{-\infty}^b f_Y(y) dy = F_X(a) \cdot F_Y(b)
 $$
 
+
 (i) $\implies$ (iv) we can use the standard machine starting with the case when $h$ is the indicator function of a Borel subset of $\mathbb{R}^2$, to show that for every real-valued Borel-measurable function $h(x, y)$ on $\mathbb{R}^2$ we have the following:
+
 $$
 \mathbb{E}[h(X, Y)] = \int_{\mathbb{R}^2} |h(x, y)| d \mu_{X, Y} (x, y)
 $$
+
 If this quantity above is finite, then we have that:
+
 $$
 \mathbb{E}h(X, Y) = \int_{\mathbb{R}^2} h(x, y) d\mu_{X, Y} (x, y)
 $$
+
 which holds for any pair of random variables $X, Y$ whether or not they are independence, if they are independent, then their joint distribution $\mu_{X, Y}$ is a product of the marginal distributions,
+
 $$
 \mathbb{E}h(X, Y) = \int_{-\infty}^\infty \int_{-\infty}^\infty h(x, y) d \mu_{Y}(y) d \mu_X (x)
 $$
+
 After fixing $h(x, y) = e^{ux + vy}$ then we get:
+
 $$
 \begin{align*}
 \mathbb{E}e^{uX + vY} &= \int_{-\infty}^\infty \int_{-\infty}^\infty e^{ux + vy} d\mu_Y(y) d\mu(X)(x)\\
@@ -258,21 +317,29 @@ $$
 \end{align*}
 $$
 
+
 ------------------------------------------------------------------------
 
 e.g., **Independent Normal Random Variables** $X, Y$ are independent and standard normal if they have the joint density defined as: 
+
 $$
 f_{X, Y} (x, y) = \frac{1}{2 \pi} e^{-\frac{1}{2}(x^2 + y^2)} \quad\text{for all }x \in \mathbb{R}, y \in \mathbb{R}
 $$
+
 Which is the product of marginal densities:
+
 $$
 f_X(x) = \frac{1}{\sqrt{2 \pi}}e^{-\frac{1}{2}x^2} \quad\text{and}\quad f_Y(y) = \frac{1}{\sqrt{2\pi}} e^{-\frac{1}{2}}y^2
 $$
+
 We use the notation,
+
 $$
 N(a) = \frac{1}{\sqrt{2 \pi}} \int_{-\infty}^a e^{-\frac{1}{2}x^2} dx
 $$
+
 for the standard normal cumulative distribution function, the joint cumulative distribution function for $(X, Y)$ factors:
+
 $$
 \begin{align*}
 F_{X, Y}(a,b) &= \int_{-\infty}^\infty \int_{-\infty}^\infty f_X(x) f_Y(y) dy dx\\
@@ -280,7 +347,9 @@ F_{X, Y}(a,b) &= \int_{-\infty}^\infty \int_{-\infty}^\infty f_X(x) f_Y(y) dy dx
 &= N(a) \cdot N(b)
 \end{align*}
 $$
+
 thus the $\mu_{X, Y}$ joint distribution is the probability measure on $\mathbb{R}^2$ that assigns a measure to each Borel set $C \subset \mathbb{R}^2$ equal to the integral of $f_{X, Y}(x, y)$ over $C$. If $C = A \times B$ where $A \in \mathcal{B}(\mathbb{R})$ and equivalently for $B$, then $\mu_{X, Y}$ factors:
+
 $$
 \begin{align*}
 \mu_{X, Y}(A \times B) &= \int_A \int_B f_X(x) f_Y(y) dy dx\\
@@ -289,32 +358,41 @@ $$
 \end{align*}
 $$
 
+
 ------------------------------------------------------------------------
 
 **Definitions: Review of Variance and Covariance**
 $Var(X)$ of a random variable $X$ whose expected value is defined is given as,
+
 $$
 \begin{align*}
 Var(X) = \mathbb{E}[(X - \mathbb{E}X)^2]
 \end{align*}
 $$
+
 the part in the square brackets is non-negative, so $Var(X)$ is always defined, although it might be infinite. with $\sigma = \sqrt{Var(X)}$ being the standard deviation. 
 
 Linearly of expectation: $Var(X) = \mathbb{E}[X^2] - (\mathbb{E}X)^2$ which is trivially proven in 2nd year STAT 230.
 Define $Y$ as another random variable, and assume $\mathbb{E}X$, $Var(X)$, $\mathbb{E}Y$ and $Var(Y)$ are all finite,
+
 $$
 Cov(X, Y) = \mathbb{E}[(X - \mathbb{E}X)(Y - \mathbb{E}Y)]
 $$
+
 is the covariance of $X, Y$ which also can be shown,
+
 $$
 Cov(X, Y) = \mathbb{E}[XY] - \mathbb{E}X \cdot \mathbb{E}Y
 $$
+
 $\mathbb{E}[XY] = \mathbb{E}X \cdot \mathbb{E}Y$ if and only if $Cov(X, Y) = 0$. 
 
 The correlation coefficient of $X, Y$ can be defined as:
+
 $$
 \rho(X, Y) = \frac{Cov(X, Y)}{Var(X) Var(Y)}
 $$
+
 so, if $\rho(X, Y) = 0$ for equivalently $Cov(X, Y) = 0$, then we can say that $X, Y$ are uncorrelated.
 
 ------------------------------------------------------------------------
@@ -322,6 +400,7 @@ so, if $\rho(X, Y) = 0$ for equivalently $Cov(X, Y) = 0$, then we can say that $
 e.g., Uncorrelated, Dependent, normal random variables, let $X$ be a standard normal random variable and let $Z$ be independent of $X$ and $Y$ satisfy, let$Y = ZX$, we show $Y$ is also standard normal, and that $X, Y$ are uncorrelated but not independent. 
 
 i.e., the pair $(X, Y)$ does not have a joint density,
+
 $$
 \begin{align*}
 F_Y(b) &= \mathbb{P}\{Y \le b\}\\
@@ -329,7 +408,9 @@ F_Y(b) &= \mathbb{P}\{Y \le b\}\\
 &= \mathbb{P}\{X \le b \text{ and } Z = 1\} + \mathbb{P}\{-X \le b \text{ and } Z = -1\}
 \end{align*}
 $$
+
 Since $X, Z$ are independent, we have that
+
 $$
 \begin{align*}
 \mathbb{P}\{X \le b \text{ and } Z = 1\} &+ \mathbb{P}\{-X \le b \text{ and } Z = -1\}\\
@@ -337,36 +418,49 @@ $$
 &= \frac{1}{2} \cdot \mathbb{P}\{X \le b\} + \frac{1}{2} \cdot \mathbb{P}\{-X \le b\}
 \end{align*}
 $$
+
 Since $X$ is standard normal, so is $-X$, thus, $\mathbb{P}\{X \le b\} = \mathbb{P}\{- X \le b\} = N(b)$, thus $F_Y(b) = N(b)$. 
 $Y$ is a standard normal random variable. Since $\mathbb{E}X = \mathbb{E}Y = 0$, the covariance of $X$ and $Y$ is
+
 $$
 Cov(X,Y) = \mathbb{E}[XY] = \mathbb{E}[ZX^2]
 $$
+
 $Z$ and $X$ are independent, so are $Z$ and $X^2$, 
+
 $$
 \mathbb{E}[Z X^2] = \mathbb{E}Z \cdot \mathbb{E}[X^2] = 0 \cdot 1 = 0
 $$
+
 Therefore, $X, Y$ are uncorrelated. 
 
 $X, Y$ cannot be independent, because, if they were, then $|X|$ and $|Y|$ would also be independent,
+
 $$
 \mathbb{P} \{|X| \le 1, |Y| \le 1\} = \mathbb{P}\{|X| \le 1\} = N(1) - N(-1)
 $$
+
+
 $$
 \mathbb{P}\{|X| \le 1\} \cdot \mathbb{P}\{|Y| \le 1\} = (N(1) - N(-1))^2
 $$
+
 which are not equal expressions, as they would be for independent random variables. 
 
 ------------------------------------------------------------------------
 
 **Definition**: two random variables $X$ and $Y$ are said to be jointly normal if they have the joint density as defined by,
+
 $$
 f_{X, Y}(x, y) = \frac{1}{2 \pi \sigma_1 \sigma_2 \sqrt{1 - p^2}} \exp \left\{- \frac{1}{2 (1 - p^2)} \left[\frac{(x - \mu_1)^2}{\sigma_1^2} - \frac{2\rho (x - \mu_1)(y - \mu_2)}{\sigma_1 \sigma_2} + \frac{(y - \mu_2)^2}{\sigma_2^2} \right] \right\}
 $$
+
 where $\sigma_1 > 0, \sigma_2 > 0$ and $|\rho| < 1$, where $\mu_1, \mu_2$ are real numbers. More generally, a random column vector $\mathcal{X} = (X_1, \dots, X_n)^T$ is jointly normal if it has joint density, 
+
 $$
 f_\mathcal{X} (\mathcal{x}) = \frac{1}{\sqrt{(2\pi)^n \det(C)}} \exp \left\{ -\frac{1}{2} (x - \mu)C^{-1} (x - \mu)^T \right\}
 $$
+
 there $x = (x_1, \dots x_n)$ is a row vector of dummy variables with $\mu = (\mu_1, \dots, \mu_n)$ is the row vector of expectations and $C$ is the positive definite matrix of covariances. 
 - Linear combinations of jointly normal random variables are jointly normal
 - Independent normal random variables are jointly normal, thus, a general method for creating jointly normal random variables is to begin with a set of independent normal random variables and take linear combinations. 
@@ -375,6 +469,7 @@ there $x = (x_1, \dots x_n)$ is a row vector of dummy variables with $\mu = (\mu
 ------------------------------------------------------------------------
 
 e.g., $(X, Y)$ is a jointly normal pair of random variables with density defined above in the definition, we define $W = Y - \frac{\rho \sigma_2}{\sigma_1} X$ then $X, W$ are independent. We verify this by showing that $X, W$ have covariance zero since they are jointly normal,
+
 $$
 \begin{align*}
 Cov(X, W) &= \mathbb{E}[(X - \mathbb{E}X)(W - \mathbb{E}W)] \\
@@ -383,7 +478,9 @@ Cov(X, W) &= \mathbb{E}[(X - \mathbb{E}X)(W - \mathbb{E}W)] \\
 &= 0
 \end{align*}
 $$
+
 Thus, the expectation of $W = \mu_3 = \mu_2 - \frac{\sigma \sigma_2 \mu_1}{\sigma_1}$ and the variance is,
+
 $$
 \begin{align*}
 \sigma_3^2 &= \mathbb{E}[(W - \mathbb{E}W)^2]\\
@@ -391,10 +488,13 @@ $$
 &= (1 - \rho^2) \sigma_2^2
 \end{align*}
 $$
+
 Thus, the joint density of $X$ and $W$ can be written as,
+
 $$
 f_{X, W}(x, w) = \frac{1}{2 \pi \sigma_1 \sigma_3} \exp \left\{-\frac{(x - \mu_1)^2}{2 \sigma_1^2} - \frac{(w - \mu_3)^2}{2\sigma_3^2} \right\} \implies Y = \frac{\rho \sigma_2}{\sigma_1} X + W
 $$
+
 which is the decomposed $Y$ into the linear combination of a pair of independent normal random variables $X$ and $W$. 
 
 ------------------------------------------------------------------------
@@ -406,91 +506,125 @@ In the immediate case, the conditional expectation of $X$ given $\mathcal{G}$ is
 **Definition**: $\mathcal{G}$ is a sub-$\sigma$-algebra of $\mathcal{F}$ and let $X$ be a random variable which is either non-negative or integrable. Conditional expectation of $X$ given $\mathcal{G}$ denoted $\mathbb{E}[X | \mathcal{G}]$ is any random variable that satisfies:
 1. Measurability: $\mathbb{E}[X | \mathcal{G}]$ is $\mathcal{G}$-measurable, and
 2. Partial Averaging: 
+
 $$
 \int_A \mathbb{E}[X | \mathcal{G}](\omega) d \mathbb{P}(\omega) = \int_A X(\omega) d \mathbb{P}(\omega),\quad \forall A \in \mathcal{G}
 $$
+
 If $\mathcal{G}$ is the $\sigma$-algebra generated by some other random variable $W$ then we can write $\mathbb{E}[X | W]$ rather than $\mathbb{E}[X | \sigma(W)]$. The estimate of $X$ is based on the information in $\mathcal{G}$ is itself a random variable, the value of the estimate $\mathbb{E}[X | \mathcal{G}]$ can be determined from the information in $\mathcal{G}$.
 
 (i) estimates $\mathbb{E}[X | \mathcal{G}]$ of $X$ is based on the information in $\mathcal{G}$. (ii) ensures that $\mathbb{E}[X | \mathcal{G}]$ is indeed an estimate of $X$. It gives the same averages of $X$ over all the sets in $\mathcal{G}$. If $\mathcal{G}$ has many sets, partial-averaging property over the small sets in $\mathcal{G}$ says that $\mathbb{E}[X | \mathcal{G}]$ is a good estimator of $X$.
 
 Because both $Y$ and $Z$ are $\mathcal{G}$-measurable, their difference $Y - Z$ is as well, thus we can define the set $A = \{Y - Z > 0\}$ is in $\mathcal{G}$, thus we have:
+
 $$
 \int_A Y(\omega) d\mathbb{P}(\omega) = \int_A X(\omega) d\mathbb{P}(\omega) = \int_A Z(\omega) d\mathbb{P}(\omega) \implies \int_A (Y(\omega) - Z(\omega)) d\mathbb{P}(\omega) = 0
 $$
+
 ------------------------------------------------------------------------
 **Theorem**:
 1. Linearity of Conditional expectations: $X, Y$ are integrable random variables and $c_1, c_2$ are constants, then we can write:
+
 $$
 \mathbb{E}[c_1 X + c_2Y | \mathcal{G}] = c_1 \mathbb{E}[X | \mathcal{G}] + c_2 \mathbb{E}[Y | \mathcal{G}]
 $$
+
 2. Taking out what is Known: If $X, Y$ are integrable and $Y$ and $XY$ are integrable and $X$ is $\mathcal{G}$-measurable, then we can write:
+
 $$
 \mathbb{E}[XY | \mathcal{G}] = X\mathbb{E}[Y | \mathcal{G}]
 $$
+
 3. Iterated Conditioning: If $\mathcal{H}$ is a sub-$\sigma$-algebra of $\mathcal{G}$, and $X$ is integrable, then
+
 $$
 \mathbb{E}[\mathbb{E}[X | \mathcal{G}] | \mathcal{H}] = \mathbb{E}[X | \mathcal{H}]
 $$
+
 4. Independence, if $X$ is integrable, and independent of $\mathcal{G}$, then
+
 $$
 \mathbb{E}[X | \mathcal{G}] = \mathbb{E}X
 $$
+
 5. Conditional Jensen's Inequality: If $\phi(x)$ is a convex function of a dummy variable $x$ and $X$ is integrable, then we can write:
+
 $$
 \mathbb{E}[\phi(X) | \mathcal{G}] \ge \phi (\mathbb{E}[X | \mathcal{G}])
 $$
+
 The proof for this theorem is in Stochastic Calculus for Finance II by Shreve, go read it it you have time to spare, the discussion and proof follow quite similarly from discrete calculus.
 
 ------------------------------------------------------------------------
 
 e.g.s, Let $X, Y$ be a pair of jointly normal random variables with density. Define
+
 $$
 W = Y = \frac{\rho \sigma_2}{\sigma_1} X
 $$
+
 Then $X, W$ are independent, and we can write
+
 $$
 Y = \frac{\rho \sigma_2}{\sigma_1} X + W
 $$
+
 Let us take the conditioning $\sigma$-algebra to be $\mathcal{G} = \sigma(W)$. We estimate $Y$ based on $X$ using the above, and properties, and get the linear regression equation,
+
 $$
 \mathbb{E}[Y | X] = \frac{\rho \sigma_2}{\sigma_1} X + \mathbb{E}W = \frac{\rho \sigma_2}{\sigma_1} (X - \mu_1) + \mu_2
 $$
+
 The RHS of the above is the random but is $\sigma(X)$-measurable which is the same as knowing the value of $X$, then we can evaluate $\mathbb{E}[Y|X]$. We can see the error by the estimator is,
+
 $$
 Y - \mathbb{E}[Y | X] = W - \mathbb{E}W
 $$
+
 The error is random with expected value zero, and is independent of the estimate $\mathbb{E}[Y | X]$ because $\mathbb{E}[Y | X]$ is $\sigma(X)$-measurable and $W$ is independent of $\sigma(X)$. The independence between the error and the conditioning random variable $X$ is a consequence of the jointly normality in the example. 
 
 **Lemma**: Independence, Suppose that $\mathcal{G}$ is a sub-$\sigma$-algebra of $\mathcal{F}$. Suppose the random variables $X_1, \dots, X_K$ are $\mathcal{G}$-measurable and the random variables $Y_1, \dots, Y_L$ are independent of $\mathcal{G}$. Let $f(x_1, \dots, x_K, y_1, \dots, y_L)$ be a function of the dummy variables $x_1, \dots, x_K$ and $y_1, \dots, y_L$ and define the following:
+
 $$
 g(x_1, \dots, x_K) = \mathbb{E}f(x_1, \dots, x_K, Y_1, \dots, Y_L)
 $$
+
 Then we can write,
+
 $$
 \mathbb{E}[f(X_1, \dots, X_K, Y_1, \dots, Y_L) | \mathcal{G}] = g(X_1, \dots, X_K)
 $$
+
 Since the information in $\mathcal{G}$ is sufficient to determine the values of $X_1, \dots, X_K$, we should hold these random variables constant when estimating $f(X_1, \dots, X_K, Y_1, \dots, Y_K)$. 
 
 ------------------------------------------------------------------------
 
 **Definition**: Let $T$ be fixed positive number, and let $\mathcal{F}(t)$ for $0 \le t \le T$ be a filtration of sub-$\sigma$-algebras of $\mathcal{F}$. Consider an adapted stochastic process $M(t)$, for $0 \le t \le T$,
 1. A process is **martingale** (no tendency to rise or fall) if the following holds:
+
 $$
 \mathbb{E}[M(t) | \mathcal{F}(s)] = M(s), \quad\text{for all }0 \le s \le t \le T
 $$
+
 2. A process is **submartingale** (no tendency to fall, but tendency to rise) if the following holds:
+
 $$
 \mathbb{E}[M(t) | \mathcal{F}(s)] \ge M(s), \quad\text{for all }0 \le s \le t \le T
 $$
+
 3. A process is **supermartingale** (no tendency to rise, but tendency to fall) if this holds:
+
 $$
 \mathbb{E}[M(t) | \mathcal{F}(s)] \le M(s),\quad\text{for all }0 \le s \le t \le T
 $$
 
+
 **Definition**: Let $T$ be fixed positive integer and let $\mathcal{F}(t)$ and $0 \le t \le T$ be a filtration of sub-$\sigma$-algebras of $\mathcal{F}$. Consider an adapted stochastic process $X(t)$ and assume that $0 \le s \le t \le T$ for every non-negative, Borel-measurable function $f$, there is another Borel-measurable function $g$ such that we have,
+
 $$
 \mathbb{E}[f(X(t)) | \mathcal{F}(s)] = g(X(s))
 $$
+
 Then we say that the $X$ is a Markov process. 
 
 
