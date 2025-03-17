@@ -546,6 +546,7 @@ $$
 ------------------------------------------------------------------------
 
 **Theorem:** $W$ is a Brownian Motion, then $[W, W](T) = T$ for all $T \ge 0$ almost surely. 
+
 **Proof:**
 For sampled quadratic variation corresponding to this partition, we have,
 
@@ -553,7 +554,7 @@ $$
 Q_{\Pi} = \sum_{j = 0}^{n - 1} (W(t_{j + 1}) - W(t_j))^2
 $$
 
-We show that this is a random variable and converges to $T$ as $||\Pi|| \rightarrow 0$. Moreover, it has expected value $T$ and variance that converges to 0. Hence, it converges to expected value $T$ regardless of the path along which we are doing the computation. 
+We show that this is a random variable and converges to $T$ as $\left\lVert \Pi\right\rVert \rightarrow 0$. Moreover, it has expected value $T$ and variance that converges to 0. Hence, it converges to expected value $T$ regardless of the path along which we are doing the computation. 
 
 ------------------------------------------------------------------------
 
