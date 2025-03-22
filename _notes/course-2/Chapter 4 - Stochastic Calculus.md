@@ -1,3 +1,12 @@
+---
+layout: page
+title: Chapter 4 - Stochastic Calculus
+description: Notes on Brownian motion and its applications.
+parent: course-2
+importance: 5
+permalink: /notes/course-2/chapter-4-stochastic-calculus/
+nav: false
+---
 
 **Ito's Integral**
 We fix a positive number $T$, and seek to interpret,
