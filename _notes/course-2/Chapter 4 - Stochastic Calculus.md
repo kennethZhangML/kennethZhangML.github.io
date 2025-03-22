@@ -3,7 +3,7 @@ layout: page
 title: Chapter 4 - Stochastic Calculus
 description: Notes on Brownian motion and its applications.
 parent: course-2
-importance: 5
+importance: 6
 permalink: /notes/course-2/chapter-4-stochastic-calculus/
 nav: false
 ---
