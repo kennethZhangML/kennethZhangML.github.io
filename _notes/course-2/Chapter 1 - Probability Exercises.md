@@ -14,21 +14,27 @@ nav: false
 
 Express $B$ as a union of two disjoint sets where:
 
+
 $$
 B = A \cup (B \backslash A) \text{ where } A \cap (B \backslash A) = \emptyset
 $$
 
+
 Notice that $B \backslash A$ is also in $F$ so it's $F$-measurable, so, by countable additivity:
+
 
 $$
 \mathbb{P}(A) = \mathbb{P}(A) + \mathbb{P}(B \backslash A)
 $$
 
+
 Since the probability is non-negative, we can say that:
+
 
 $$
 \mathbb{P}(B \backslash A) \ge 0 \implies \mathbb{P}(A) \le \mathbb{P}(B)
 $$
+
 
 So, the result is proven.
 
@@ -36,21 +42,27 @@ So, the result is proven.
 
 Since $A \subset A_n$ for all $n$, we apply the monotonicity of probability, which tells us:
 
+
 $$
 \mathbb{P}(A) \le \mathbb{P}(A_n) = 0, \quad \forall n
 $$
 
+
 when we take the limit as $n \rightarrow \infty$ we obtain,
+
 
 $$
 \mathbb{P}(A) \le \lim_{n \rightarrow \infty} \mathbb{P}(A_n) = 0
 $$
 
+
 and, since probability measures are always non-negative, we get:
+
 
 $$
 \mathbb{P}(A) = 0
 $$
+
 
 Thus, the result is proven.
 
@@ -70,9 +82,11 @@ The key observation is that $A$ is highly structured subset of $\Omega_\infty$ c
 
 The probability of selecting a sequence from this subset if analogous to picking from a lower-dimensional subspace in a continuous probability measure. Since the probability measure on $\Omega_\infty$ is a product measure, and since $A$ is effectively a zero-volume subset (infinite constraints reduce the measure) we conclude:
 
+
 $$
 \mathbb{P}(A) = 0
 $$
+
 
 Thus the probability of the event $A$ occurring is zero when $0 < p < 1$. 
 
@@ -85,18 +99,22 @@ We show that the set function $\mathbb{P}$ defined on subsets of $[0, 1]$ by the
 3. If $A, B$ are disjoint, then if both are finite we have that $\mathbb{P}(A \cup B) = 0 = \mathbb{P}(A) + \mathbb{P}(B)$, otherwise, if either is finite then the union between $A$ and $B$ is infinite, so $\mathbb{P}(A \cup B) = \infty$ which matches $\mathbb{P}(A) + \mathbb{P}(B)$
 We can show that $\mathbb{P}$ does not satisfy countable additivity. Countable additivity states that if $A_1, A_2, \dots$ are disjoint sets, then:
 
+
 $$
 \mathbb{P}\left(\cup_{n = 1}^\infty A_n \right) = \sum_{n = 1}^\infty \mathbb{P}(A_n)
 $$
+
 
 Consider the case where $A_n = \{x_n \}$ are singleton sets for some distinct points $x_n \in [0, 1]$ 
 - each $A_n$ is finite so $\mathbb{P}(A_n) = 0$
 - Thus, $\sum_{n = 1}^\infty \mathbb{P}(A_n) = \sum_{n = 1}^\infty 0 = 0$
 - However, the union of $A_n$ from $n$ to $\infty$ is $\{x_1, x_2, x_3, \dots\}$ is an infinite set, so:
 
+
 $$
 \mathbb{P} \left(\cup_{n = 1}^\infty A_n \right) = \infty
 $$
+
 
 This contradicts countable additivity because $\infty \neq 0$. Thus, $\mathbb{P}$ does not satisfy countable additivity. 
 
@@ -105,6 +123,7 @@ This contradicts countable additivity because $\infty \neq 0$. Thus, $\mathbb{P}
 (i) Define the sequence of independent fair coin tosses $\omega = (\omega_1, \omega_2, \dots)$, where each toss takes values in $\{H, T\}$ with probability $p(H) = p(T) = \frac{1}{2}$. We construct a standard normal random variable $Z$ using the following method:
 1. Represent each sequence $\omega$ as an infinite binary sequence:
    
+
 $$
    X_i = 
    \begin{cases}
@@ -113,38 +132,48 @@ $$
    \end{cases}
    $$
 
+
    where $\{X_i\}_{i=1}^{\infty}$ are i.i.d. Rademacher random variables with mean 0 and variance 1.
 2. Define the random variable:
    
+
 $$
    Z = \sum_{i=1}^{\infty} \frac{X_i}{2^{i/2}}.
    $$
+
 
    This sum converges almost surely and follows a standard normal distribution by the central limit theorem and properties of infinite Rademacher series.
 Thus, $Z$ is a standard normal random variable constructed from the infinite coin tosses.
 
 (ii) To approximate $Z$ using a sequence of finite coin tosses, define the sequence of partial sums:
 
+
 $$
 Z_n = \sum_{i=1}^{n} \frac{X_i}{2^{i/2}}.
 $$
 
+
 Each $Z_n$ depends only on the first $n$ coin tosses and is thus an approximation of $Z$. Since the remainder term
+
 
 $$
 R_n = \sum_{i=n+1}^{\infty} \frac{X_i}{2^{i/2}}
 $$
 
+
 tends to zero as $n \to \infty$, we have:
+
 
 $$
 \lim_{n \to \infty} Z_n = Z.
 $$
 
+
 This provides a way to approximate the standard normal variable using a finite number of coin tosses, which is useful for **Monte Carlo simulations**.
 
 
 **Exercise 1.5**
+
 
 $$
 \begin{align*}
@@ -158,8 +187,10 @@ $$
 
 
 
+
 **Exercise 1.6**
 (i) We verify that 
+
 
 
 $$
@@ -167,7 +198,9 @@ $$
 $$
 
 
+
 The expectation is computed as:
+
 
 $$
 \begin{align*}
@@ -177,7 +210,9 @@ $$
 \end{align*}
 $$
 
+
 Completing the square in the exponent:
+
 
 $$
 \begin{align*}
@@ -187,7 +222,9 @@ ux - \frac{(x-\mu)^2}{2\sigma^2} &= -\frac{1}{2\sigma^2} \left( (x-\mu)^2 - 2u\s
 \end{align*}
 $$
 
+
 Thus, the integral becomes:
+
 
 $$
 \begin{align*}
@@ -195,7 +232,9 @@ $$
 \end{align*}
 $$
 
+
 Since the remaining integral is the total probability mass of a normal distribution, it evaluates to $\sigma \sqrt{2\pi}$, giving:
+
 
 $$
 \begin{align*}
@@ -203,30 +242,39 @@ $$
 \end{align*}
 $$
 
+
 (ii) Jensen’s inequality states that for a convex function $\varphi$,
+
 
 $$
 \mathbb{E}[\varphi(X)] \geq \varphi(\mathbb{E}[X]).
 $$
 
 
+
 Since $\varphi(x) = e^{ux}$ is convex (as its second derivative is positive), we apply Jensen’s inequality:
+
 
 $$
 \mathbb{E}[e^{uX}] \geq e^{u\mathbb{E}[X]} = e^{u\mu}.
 $$
 
+
 From (i), we already showed that:
+
 
 $$
 \mathbb{E}[e^{uX}] = e^{u\mu + \frac{1}{2} u^2 \sigma^2}.
 $$
 
+
 Since $\frac{1}{2} u^2 \sigma^2 \geq 0$, it follows that:
+
 
 $$
 e^{u\mu + \frac{1}{2} u^2 \sigma^2} \geq e^{u\mu}.
 $$
+
 
 Thus, Jensen’s inequality holds as expected.
 
@@ -235,42 +283,54 @@ Thus, Jensen’s inequality holds as expected.
 **Exercise 1.7**
 (i) We determine the pointwise limit of $f_n(x)$ as $n \to \infty$:
 
+
 $$
 f_n(x) = \frac{1}{\sqrt{2n\pi}} e^{-x^2 / 2n}.
 $$
 
+
 For fixed $x$, as $n \to \infty$, the exponent $-x^2 / 2n \to 0$, so $e^{-x^2 / 2n} \to 1$. Thus,
+
 
 $$
 f_n(x) \to \lim_{n \to \infty} \frac{1}{\sqrt{2n\pi}} = 0.
 $$
 
+
 Hence, the limiting function is $f(x) = 0$ for all $x \in \mathbb{R}$.
 
 (ii) The integral of $f_n(x)$ over $\mathbb{R}$ is:
+
 
 $$
 \int_{-\infty}^{\infty} f_n(x) dx = \int_{-\infty}^{\infty} \frac{1}{\sqrt{2n\pi}} e^{-x^2 / 2n} dx.
 $$
 
+
 By a standard Gaussian integral result, this evaluates to 1 for all $n$, so:
+
 
 $$
 \lim_{n \to \infty} \int_{-\infty}^{\infty} f_n(x) dx = 1.
 $$
 
 
+
 (iii) Since $f_n(x) \to 0$ pointwise, we integrate the limit:
+
 
 $$
 \int_{-\infty}^{\infty} f(x) dx = \int_{-\infty}^{\infty} 0 \,dx = 0.
 $$
 
+
 Thus, we see:
+
 
 $$
 \lim_{n \to \infty} \int_{-\infty}^{\infty} f_n(x) dx \neq \int_{-\infty}^{\infty} f(x) dx.
 $$
+
 
 This does not contradict the Monotone Convergence Theorem (MCT) because MCT requires that $f_n(x)$ be increasing, but here $f_n(x)$ decreases to 0 for all $x$. Instead, this is an example where pointwise convergence does not imply convergence under the integral.
 
@@ -279,53 +339,69 @@ This does not contradict the Monotone Convergence Theorem (MCT) because MCT requ
 **Exercise 1.8**
 (i) We use the Dominated Convergence Theorem (DCT) to show that
 
+
 $$
 \lim_{n \to \infty} \mathbb{E}[Y_n] = \mathbb{E} \left[ \lim_{n \to \infty} Y_n \right] = \mathbb{E}[X e^{tX}].
 $$
 
+
 From equation (1.9.1), we rewrite $Y_n$ as
+
 
 $$
 Y_n = \frac{e^{tX} - e^{s_n X}}{t - s_n} = X e^{\theta(\omega) X},
 $$
 
+
 where $\theta(\omega)$ lies between $t$ and $s_n$. Since $e^{\theta X}$ is bounded by $e^{tX} + e^{s_n X}$, we obtain
+
 
 $$
 |Y_n| \leq |X| (e^{tX} + e^{s_n X}).
 $$
 
+
 Since we assume $\mathbb{E}[|X| e^{tX}] < \infty$ for all $t$, the function $|X| e^{tX}$ is integrable. Thus, by the Dominated Convergence Theorem,
+
 
 $$
 \lim_{n \to \infty} \mathbb{E}[Y_n] = \mathbb{E} \left[ \lim_{n \to \infty} Y_n \right] = \mathbb{E}[X e^{tX}].
 $$
 
+
 This proves that $\varphi'(t) = \mathbb{E}[X e^{tX}]$.
 
 (ii) Suppose $X$ can take both positive and negative values and satisfies
+
 
 $$
 \mathbb{E}[e^{tX}] < \infty, \quad \mathbb{E}[|X| e^{tX}] < \infty, \quad \forall t \in \mathbb{R}.
 $$
 
+
 We decompose $X$ into positive and negative parts as
+
 
 $$
 X = X^+ - X^-,
 $$
 
+
 where $X^+ = \max(X, 0)$ and $X^- = \max(-X, 0)$. Then, applying linearity,
+
 
 $$
 \varphi(t) = \mathbb{E}[e^{tX}] = \mathbb{E}[e^{tX^+} e^{-tX^-}].
 $$
 
+
 Differentiating,
+
 
 $$
 \varphi'(t) = \mathbb{E}[(X^+ - X^-) e^{tX}] = \mathbb{E}[X e^{tX}].
 $$
+
 
 Thus, the result holds for general $X$.
 
@@ -334,65 +410,85 @@ Thus, the result holds for general $X$.
 **Exercise 1.9**
 We want to show that if $X$ is independent of $A$, then for every nonnegative, Borel-measurable function $g$,
 
+
 $$
 \int_A g(X(\omega)) d\mathbb{P}(\omega) = \mathbb{P}(A) \cdot \mathbb{E}[g(X)].
 $$
 
 
+
 Consider the indicator function $\mathbb{I}_B(x)$ for any Borel set $B \subset \mathbb{R}$. From the given independence condition,
+
 
 $$
 \int_A \mathbb{I}_B(X(\omega)) d\mathbb{P}(\omega) = \ mathbb{P}(A) \cdot \mathbb{P}(X \in B).
 $$
 
+
 Now, let $g(x)$ be a simple function of the form
+
 
 $$
 g(x) = \sum_{i=1}^{n} c_i \mathbb{I}_{B_i}(x),
 $$
 
+
 where $c_i \geq 0$ and $B_i$ are disjoint Borel sets. Then,
+
 
 $$
 \int_A g(X(\omega)) d\mathbb{P}(\omega) = \sum_{i=1}^{n} c_i \int_A \mathbb{I}_{B_i}(X(\omega)) d\mathbb{P}(\omega).
 $$
 
+
 By the independence property,
+
 
 $$
 \int_A \mathbb{I}_{B_i}(X(\omega)) d\mathbb{P}(\omega) = \mathbb{P}(A) \cdot \mathbb{P}(X \in B_i).
 $$
 
+
 Thus,
+
 
 $$
 \int_A g(X(\omega)) d\mathbb{P}(\omega) = \sum_{i=1}^{n} c_i \mathbb{P}(A) \mathbb{P}(X \in B_i) = \mathbb{P}(A) \sum_{i=1}^{n} c_i \mathbb{P}(X \in B_i).
 $$
 
+
 Since
+
 
 $$
 \sum_{i=1}^{n} c_i \mathbb{P}(X \in B_i) = \mathbb{E}[g(X)],
 $$
 
+
 we obtain
+
 
 $$
 \int_A g(X(\omega)) d\mathbb{P}(\omega) = \mathbb{P}(A) \mathbb{E}[g(X)].
 $$
 
 
+
 For a general nonnegative Borel-measurable function $g$, we approximate it by an increasing sequence of simple functions $g_n$ such that $g_n \uparrow g$. By the Monotone Convergence Theorem,
+
 
 $$
 \int_A g(X(\omega)) d\mathbb{P}(\omega) = \lim_{n \to \infty} \int_A g_n(X(\omega)) d\mathbb{P}(\omega).
 $$
 
+
 Since the result holds for each $g_n$, taking limits gives
+
 
 $$
 \int_A g(X(\omega)) d\mathbb{P}(\omega) = \mathbb{P}(A) \mathbb{E}[g(X)].
 $$
+
 
 Thus, the result is proven.
 
@@ -401,59 +497,75 @@ Thus, the result is proven.
 **Exercise 1.10**
 (i) We show that $\tilde{\mathbb{P}}$ is a probability measure. By definition,
 
+
 $$
 \tilde{\mathbb{P}}(A) = \int_A Z(\omega) d\mathbb{P}(\omega).
 $$
+
 
 To verify that $\tilde{\mathbb{P}}$ is a probability measure, we check:
 
 1. **Non-negativity**: Since $Z(\omega) \geq 0$ for all $\omega$, we have $\tilde{\mathbb{P}}(A) \geq 0$ for all measurable sets $A$.
 2. **Normalization**: The total measure is
 
+
 $$
 \tilde{\mathbb{P}}([0,1]) = \int_{0}^{1} Z(\omega) d\mathbb{P}(\omega).
 $$
 
+
 Splitting into two regions:
+
 
 $$
 \tilde{\mathbb{P}}([0,1]) = \int_0^{1/2} 0 \, d\mathbb{P}(\omega) + \int_{1/2}^{1} 2 \, d\mathbb{P}(\omega).
 $$
 
+
 Since $\mathbb{P}$ is the uniform Lebesgue measure, we get:
+
 
 $$
 \int_{1/2}^{1} 2 \cdot d\mathbb{P}(\omega) = 2 \times \frac{1}{2} = 1.
 $$
 
+
 So $\tilde{\mathbb{P}}([0,1]) = 1$.
 
 3. **Countable Additivity**: If $\{A_n\}$ are disjoint measurable sets, then by linearity of the integral:
+
 
 $$
 \tilde{\mathbb{P}} \left(\bigcup_{n=1}^{\infty} A_n \right) = \int_{\bigcup A_n} Z(\omega) d\mathbb{P}(\omega) = \sum_{n=1}^{\infty} \int_{A_n} Z(\omega) d\mathbb{P}(\omega) = \sum_{n=1}^{\infty} \tilde{\mathbb{P}}(A_n).
 $$
 
+
 Thus, $\tilde{\mathbb{P}}$ is a probability measure.
 
 (ii) If $\mathbb{P}(A) = 0$, then
+
 
 $$
 \tilde{\mathbb{P}}(A) = \int_A Z(\omega) d\mathbb{P}(\omega).
 $$
 
+
 Since the integral is taken over a set of measure zero, we obtain $\tilde{\mathbb{P}}(A) = 0$. This confirms that $\tilde{\mathbb{P}}$ is absolutely continuous with respect to $\mathbb{P}$.
 
 (iii) We construct a set $A$ for which $\tilde{\mathbb{P}}(A) = 0$ but $\mathbb{P}(A) > 0$. Take
 
+
 $$
 A = [0,1/2).
 $$
+
 Then,
+
 
 $$
 \tilde{\mathbb{P}}(A) = \int_{0}^{1/2} Z(\omega) d\mathbb{P}(\omega) = \int_{0}^{1/2} 0 \cdot d\mathbb{P}(\omega) = 0.
 $$
+
 
 However, under the Lebesgue measure, $\mathbb{P}(A) = 1/2 > 0$. This shows that $\tilde{\mathbb{P}}$ and $\mathbb{P}$ are not equivalent.
 
@@ -462,62 +574,82 @@ However, under the Lebesgue measure, $\mathbb{P}(A) = 1/2 > 0$. This shows that 
 **Exercise 1.11**
 We want to verify that under the probability measure $\tilde{\mathbb{P}}$, the moment-generating function of $Y = X + \theta$ is
 
+
 $$
 \tilde{\mathbb{E}}[e^{uY}] = e^{\frac{1}{2} u^2}.
 $$
 
+
 By definition of expectation under $\tilde{\mathbb{P}}$,
+
 
 $$
 \tilde{\mathbb{E}}[e^{uY}] = \int_{\Omega} e^{uY} Z(\omega) d\mathbb{P}(\omega).
 $$
 
+
 Substituting $Z(\omega) = e^{-\theta X - \frac{1}{2} \theta^2}$ and $Y = X + \theta$,
+
 
 $$
 \tilde{\mathbb{E}}[e^{uY}] = \int_{\Omega} e^{u(X + \theta)} e^{-\theta X - \frac{1}{2} \theta^2} d\mathbb{P}(\omega).
 $$
 
+
 Rewriting the exponent,
+
 
 $$
 \tilde{\mathbb{E}}[e^{uY}] = e^{u\theta - \frac{1}{2} \theta^2} \int_{\Omega} e^{(u - \theta)X} d\mathbb{P}(\omega).
 $$
 
+
 Using the moment-generating function of $X$ under $\mathbb{P}$, which is
+
 
 $$
 \mathbb{E}[e^{tX}] = e^{\frac{1}{2} t^2},
 $$
 
+
 we set $t = u - \theta$ to obtain
+
 
 $$
 \int_{\Omega} e^{(u - \theta)X} d\mathbb{P}(\omega) = e^{\frac{1}{2} (u - \theta)^2}.
 $$
 
+
 Thus,
+
 
 $$
 \tilde{\mathbb{E}}[e^{uY}] = e^{u\theta - \frac{1}{2} \theta^2} e^{\frac{1}{2} (u - \theta)^2}.
 $$
 
+
 Expanding the exponent,
+
 
 $$
 \frac{1}{2} (u - \theta)^2 = \frac{1}{2} (u^2 - 2u\theta + \theta^2),
 $$
 
 
+
+
 $$
 \tilde{\mathbb{E}}[e^{uY}] = e^{u\theta - \frac{1}{2} \theta^2} e^{\frac{1}{2} u^2 - u\theta + \frac{1}{2} \theta^2}.
 $$
 
+
 Canceling terms,
+
 
 $$
 \tilde{\mathbb{E}}[e^{uY}] = e^{\frac{1}{2} u^2}.
 $$
+
 
 Since this matches the moment-generating function of a standard normal variable, we conclude that $Y$ is standard normal under $\tilde{\mathbb{P}}$.
 
@@ -528,58 +660,76 @@ We need to show that $\hat{Z} = \frac{1}{Z}$ and that $\hat{\mathbb{P}} = \mathb
 
 From the problem setup, we have:
 
+
 $$
 Z = e^{-\theta X - \frac{1}{2} \theta^2}
 $$
 
+
 and the corresponding measure $\tilde{\mathbb{P}}$ defined by
+
 
 $$
 \tilde{\mathbb{P}}(A) = \int_A Z(\omega) d\mathbb{P}(\omega).
 $$
 
+
 Under $\tilde{\mathbb{P}}$, the random variable $Y = X + \theta$ is standard normal.
 Now, using the same reasoning in reverse, we define
+
 
 $$
 \hat{Z} = e^{\theta Y - \frac{1}{2} \theta^2}
 $$
 
+
 to construct the probability measure $\hat{\mathbb{P}}$ as
+
 
 $$
 \hat{\mathbb{P}}(A) = \int_A \hat{Z}(\omega) d\tilde{\mathbb{P}}(\omega).
 $$
 
+
 Substituting $Y = X + \theta$, we express $\hat{Z}$ in terms of $X$:
+
 
 $$
 \hat{Z} = e^{\theta (X + \theta) - \frac{1}{2} \theta^2} = e^{\theta X + \theta^2 - \frac{1}{2} \theta^2}.
 $$
 
+
 Simplifying the exponent,
+
 
 $$
 \hat{Z} = e^{\theta X + \frac{1}{2} \theta^2}.
 $$
 
+
 Comparing with $Z$,
+
 
 $$
 Z = e^{-\theta X - \frac{1}{2} \theta^2},
 $$
 
+
 we see that
+
 
 $$
 \hat{Z} = \frac{1}{Z}.
 $$
 
+
 Thus, we check that $\hat{\mathbb{P}}$ coincides with $\mathbb{P}$:
+
 
 $$
 \hat{\mathbb{P}}(A) = \int_A \hat{Z} d\tilde{\mathbb{P}} = \int_A \frac{1}{Z} Z d\mathbb{P} = \int_A d\mathbb{P} = \mathbb{P}(A).
 $$
+
 
 Since this holds for all measurable sets $A$, we conclude that $\hat{\mathbb{P}} = \mathbb{P}$.
 
@@ -588,73 +738,95 @@ Since this holds for all measurable sets $A$, we conclude that $\hat{\mathbb{P}}
 **Exercise 1.13**
 (i) The probability that $X$ belongs to the small interval $B(x, \epsilon) = [x - \frac{\epsilon}{2}, x + \frac{\epsilon}{2}]$ is given by
 
+
 $$
 \mathbb{P}(X \in B(x, \epsilon)) = \int_{x - \epsilon/2}^{x + \epsilon/2} \frac{1}{\sqrt{2\pi}} e^{-t^2/2} dt.
 $$
 
+
 For small $\epsilon$, we approximate this using the density function at $x$:
+
 
 $$
 \mathbb{P}(X \in B(x, \epsilon)) \approx \epsilon \cdot f_X(x) = \epsilon \cdot \frac{1}{\sqrt{2\pi}} e^{-x^2/2}.
 $$
 
+
 Dividing by $\epsilon$, we obtain:
+
 
 $$
 \frac{1}{\epsilon} \mathbb{P}(X \in B(x, \epsilon)) \approx \frac{1}{\sqrt{2\pi}} e^{-X^2(\bar{\omega})/2}.
 $$
 
 
+
 (ii) Similarly, since $Y$ is standard normal under $\tilde{\mathbb{P}}$, the probability that $Y$ belongs to $B(y, \epsilon) = [y - \frac{\epsilon}{2}, y + \frac{\epsilon}{2}]$ is given by:
+
 
 $$
 \mathbb{P}(Y \in B(y, \epsilon)) \approx \epsilon \cdot f_Y(y) = \epsilon \cdot \frac{1}{\sqrt{2\pi}} e^{-y^2/2}.
 $$
 
+
 Dividing by $\epsilon$, we obtain:
+
 
 $$
 \frac{1}{\epsilon} \mathbb{P}(Y \in B(y, \epsilon)) \approx \frac{1}{\sqrt{2\pi}} e^{-Y^2(\bar{\omega})/2}.
 $$
 
 
+
 (iii) The set $A(\bar{\omega}, \epsilon)$ is defined as a small neighbourhood of $\bar{\omega}$ such that
+
 
 $$
 \mathbb{P}(X \in B(x, \epsilon)) = \mathbb{P}(Y \in B(y, \epsilon)).
 $$
 
+
 Since $Y = X + \theta$, the intervals $B(x, \epsilon)$ and $B(y, \epsilon)$ are the same translated by $\theta$. Thus, the sets $\{X \in B(x, \epsilon)\}$ and $\{Y \in B(y, \epsilon)\}$ are identical.
 
 (iv) Using the approximation for small $A$, we write
+
 
 $$
 \frac{\tilde{\mathbb{P}}(A)}{\mathbb{P}(A)} \approx \frac{\mathbb{P}(Y \in B(y, \epsilon))}{\mathbb{P}(X \in B(x, \epsilon))}.
 $$
 
+
 Substituting the expressions from (i) and (ii),
+
 
 $$
 \frac{\tilde{\mathbb{P}}(A)}{\mathbb{P}(A)} \approx \frac{\frac{1}{\sqrt{2\pi}} e^{-Y^2(\bar{\omega})/2}}{\frac{1}{\sqrt{2\pi}} e^{-X^2(\bar{\omega})/2}} = e^{-Y^2(\bar{\omega})/2 + X^2(\bar{\omega})/2}.
 $$
 
+
 Since $Y = X + \theta$, we substitute $Y^2 = (X+\theta)^2$:
+
 
 $$
 e^{-\frac{(X+\theta)^2}{2} + \frac{X^2}{2}}.
 $$
 
+
 Expanding the exponent,
+
 
 $$
 -\frac{X^2 + 2\theta X + \theta^2}{2} + \frac{X^2}{2} = -\theta X - \frac{1}{2} \theta^2.
 $$
 
+
 Thus,
+
 
 $$
 \frac{\tilde{\mathbb{P}}(A)}{\mathbb{P}(A)} \approx e^{-\theta X(\bar{\omega}) - \frac{1}{2} \theta^2}.
 $$
+
 
 This matches the expression for $Z(\bar{\omega})$ in Example 1.6.6.
 
@@ -664,71 +836,93 @@ This matches the expression for $Z(\bar{\omega})$ in Example 1.6.6.
 (i) We verify that $\tilde{\mathbb{P}}$ is a probability measure by checking that $\tilde{\mathbb{P}}(\Omega) = 1$.
 By definition,
 
+
 $$
 \tilde{\mathbb{P}}(\Omega) = \int_{\Omega} Z d\mathbb{P}.
 $$
 
+
 Substituting $Z = \frac{\tilde{\lambda}}{\lambda} e^{-(\tilde{\lambda} - \lambda)X}$, we compute:
+
 
 $$
 \tilde{\mathbb{P}}(\Omega) = \int_{0}^{\infty} \frac{\tilde{\lambda}}{\lambda} e^{-(\tilde{\lambda} - \lambda)x} \lambda e^{-\lambda x} dx.
 $$
 
+
 Rewriting the integral,
+
 
 $$
 \tilde{\mathbb{P}}(\Omega) = \frac{\tilde{\lambda}}{\lambda} \lambda \int_{0}^{\infty} e^{-\tilde{\lambda}x} dx.
 $$
 
+
 Since the integral of an exponential density is:
+
 
 $$
 \int_{0}^{\infty} e^{-\tilde{\lambda} x} dx = \frac{1}{\tilde{\lambda}},
 $$
 
+
 we obtain:
+
 
 $$
 \tilde{\mathbb{P}}(\Omega) = \frac{\tilde{\lambda}}{\lambda} \lambda \frac{1}{\tilde{\lambda}} = 1.
 $$
 
+
 Thus, $\tilde{\mathbb{P}}$ is a valid probability measure.
 
 (ii) We compute the cumulative distribution function under $\tilde{\mathbb{P}}$:
+
 
 $$
 \tilde{\mathbb{P}}(X \leq a) = \int_0^a Z d\mathbb{P}.
 $$
 
+
 Substituting $Z$ and $\mathbb{P}$,
+
 
 $$
 \tilde{\mathbb{P}}(X \leq a) = \int_0^a \frac{\tilde{\lambda}}{\lambda} e^{-(\tilde{\lambda} - \lambda)x} \lambda e^{-\lambda x} dx.
 $$
 
+
 Rewriting the exponent,
+
 
 $$
 \tilde{\mathbb{P}}(X \leq a) = \frac{\tilde{\lambda}}{\lambda} \lambda \int_0^a e^{-\tilde{\lambda} x} dx.
 $$
 
+
 Evaluating the integral,
+
 
 $$
 \int_0^a e^{-\tilde{\lambda} x} dx = \frac{1 - e^{-\tilde{\lambda} a}}{\tilde{\lambda}}.
 $$
 
+
 Thus,
+
 
 $$
 \tilde{\mathbb{P}}(X \leq a) = \frac{\tilde{\lambda}}{\lambda} \lambda \frac{1 - e^{-\tilde{\lambda} a}}{\tilde{\lambda}}.
 $$
 
+
 Simplifying,
+
 
 $$
 \tilde{\mathbb{P}}(X \leq a) = 1 - e^{-\tilde{\lambda} a}.
 $$
+
 
 This is the cumulative distribution function of an exponential distribution with rate $\tilde{\lambda}$, confirming that $X$ is exponentially distributed with parameter $\tilde{\lambda}$ under $\tilde{\mathbb{P}}$.
 
@@ -738,40 +932,52 @@ This is the cumulative distribution function of an exponential distribution with
 (i) We first show that $Z$ is nonnegative and that $\mathbb{E}[Z] = 1$.
 Since $h(y) \geq 0$ for all $y$, $g'(X) > 0$ (since $g$ is strictly increasing), and $f(X) > 0$ (by assumption), we conclude that
 
+
 $$
 Z = \frac{h(g(X)) g'(X)}{f(X)} \geq 0.
 $$
 
+
 Thus, $Z$ is nonnegative.
 To verify that $\mathbb{E}[Z] = 1$, we compute
+
 
 $$
 \mathbb{E}[Z] = \int_{-\infty}^{\infty} Z(x) f(x) dx.
 $$
 
+
 Substituting $Z(x)$,
+
 
 $$
 \mathbb{E}[Z] = \int_{-\infty}^{\infty} \frac{h(g(x)) g'(x)}{f(x)} f(x) dx.
 $$
 
+
 Simplifying,
+
 
 $$
 \mathbb{E}[Z] = \int_{-\infty}^{\infty} h(g(x)) g'(x) dx.
 $$
 
+
 Making the substitution $y = g(x)$ so that $dy = g'(x)dx$, we rewrite the integral as
+
 
 $$
 \mathbb{E}[Z] = \int_{-\infty}^{\infty} h(y) dy.
 $$
 
+
 Since $h(y)$ is a valid density function, we have
+
 
 $$
 \int_{-\infty}^{\infty} h(y) dy = 1.
 $$
+
 
 Thus, $\mathbb{E}[Z] = 1$, verifying that $\tilde{\mathbb{P}}$ is a probability measure.
 
@@ -779,38 +985,50 @@ Thus, $\mathbb{E}[Z] = 1$, verifying that $\tilde{\mathbb{P}}$ is a probability 
 (ii) We show that $Y$ has density $h(y)$ under $\tilde{\mathbb{P}}$.
 The probability density function of $Y$ under $\tilde{\mathbb{P}}$ is given by
 
+
 $$
 \tilde{f}_Y(y) = \frac{d}{dy} \tilde{\mathbb{P}}(Y \leq y).
 $$
 
+
 By the definition of $\tilde{\mathbb{P}}$,
+
 
 $$
 \tilde{\mathbb{P}}(Y \leq y) = \tilde{\mathbb{P}}(g(X) \leq y) = \tilde{\mathbb{P}}(X \leq g^{-1}(y)).
 $$
 
+
 Using the change of measure formula,
+
 
 $$
 \tilde{\mathbb{P}}(X \leq g^{-1}(y)) = \int_{-\infty}^{g^{-1}(y)} Z(x) f(x) dx.
 $$
 
+
 Substituting $Z(x)$,
+
 
 $$
 \tilde{\mathbb{P}}(X \leq g^{-1}(y)) = \int_{-\infty}^{g^{-1}(y)} h(g(x)) g'(x) dx.
 $$
 
+
 Changing variables with $y = g(x)$ so that $dy = g'(x)dx$, we obtain
+
 
 $$
 \tilde{\mathbb{P}}(X \leq g^{-1}(y)) = \int_{-\infty}^{y} h(y) dy.
 $$
 
+
 Differentiating both sides with respect to $y$, we conclude
+
 
 $$
 \tilde{f}_Y(y) = h(y).
 $$
+
 
 Thus, under $\tilde{\mathbb{P}}$, $Y$ has density $h(y)$.
