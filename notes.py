@@ -1,25 +1,26 @@
 import re
 import os
 
-def format_latex_blocks_in_file(file_path):
+def remove_blank_lines_around_latex(file_path):
     with open(file_path, 'r') as file:
         content = file.read()
 
-    pattern = r"(\$\$[\s\S]*?\$\$)"
+    # Match LaTeX blocks with optional blank lines before and after
+    pattern = r"\n*\s*(\$\$[\s\S]*?\$\$)\s*\n*"
     
-    def add_blank_lines(match):
+    def remove_surrounding_newlines(match):
         block = match.group(1)
-        return f"\n{block}\n"
+        return block  # Return only the block, no extra newlines
 
-    formatted_content = re.sub(pattern, add_blank_lines, content)
+    cleaned_content = re.sub(pattern, remove_surrounding_newlines, content)
 
     with open(file_path, 'w') as file:
-        file.write(formatted_content)
+        file.write(cleaned_content)
 
 def process_current_directory():
     for filename in os.listdir('.'):
         if filename.endswith('.md'):
-            print(f"Processing {filename}")
-            format_latex_blocks_in_file(filename)
+            print(f"Cleaning {filename}")
+            remove_blank_lines_around_latex(filename)
 
 process_current_directory()
