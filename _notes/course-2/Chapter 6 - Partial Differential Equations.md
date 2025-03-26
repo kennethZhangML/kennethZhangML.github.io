@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Chapter 4 - Partial Differential Equations
+title: Chapter 6 - Partial Differential Equations
 description: Notes on Partial Differential Equations and its applications.
 parent: course-2
 importance: 8

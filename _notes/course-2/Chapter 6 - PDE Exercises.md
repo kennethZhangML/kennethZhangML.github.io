@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Chapter 4 - Partial Differential Equations Exercises
+title: Chapter 6 - Partial Differential Equations Exercises
 description: Notes on Partial Differential Equations and its applications.
 parent: course-2
 importance: 9
