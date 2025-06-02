@@ -17,23 +17,23 @@
   },
   "work": [
     {
-      "name": "Squarepoint Capital, Volatility",
-      "position": "Quantitative Researcher, Volatility Alpha",
+      "name": "Squarepoint Capital",
+      "position": "Quantitative Researcher, Systematic Volatility",
       "url": "https://www.squarepoint-capital.com/",
       "startDate": "2025-01-06",
       "endDate": "Present",
-      "summary": "I lead research and development on our CBOE open auction volatility strategy, developing alpha strategies for trading 0DTE SPXW options by forecasting open-to-close SPX realized volatility using intraday volatility estimators. I conduct trade execution research by building a logistic regression-based fill probability models for equity options, optimizing limit order placement, spread crossing decisions, and execution algorithms to enhance fill rates and minimize slippage using historical market data. I build equity research pipelines in Python with Pandas, NumPy, and scikit-learn to analyze pricing, factor exposures, and earnings data for alpha generation. I perform single-stock research by analyzing earnings revisions, fundamental ratios, and sentiment indicators to identify mispricings and inform systematic trading strategies. Additionally, I engineer alpha factors for single stocks by leveraging alternative data, analyst sentiment, and price-volume relationships, integrating signals into multi-factor equity models.",
+      "summary": "At Squarepoint Capital, I work as a Quantitative Researcher on the Systematic Volatility team, where I lead the development of short-term risk forecasting models and alpha signals for SPXW 0DTE options. My research focuses on predicting open-to-close realized volatility by leveraging intraday features such as futures order flow, auction pressure, and order book imbalance. I’ve built execution-aware signal pipelines and scalable backtests across multi-asset strategies, accounting for signal decay, transaction costs, and cross-sectional performance. In support of live trading, I automate theoretical implied volatility and delta computations, manage real-time data ingestion, and maintain model inference pipelines in Python and C++, with performance-critical components developed in multi-threaded C++. My work is closely integrated with portfolio managers and execution teams to ensure research insights directly inform capital allocation, position sizing, and execution logic under systematic risk constraints.",
       "highlights": [
-        "0DTE SPXW Options Trading",
-        "Intraday Volatility Estimators",
-        "Statistical Arbitrage",
-        "Machine Learning",
-        "Time Series Modeling",
-        "Logistic Regression for Execution",
-        "Equity Research Pipelines",
-        "Factor Exposure Analysis",
-        "Sentiment and Fundamental Indicators",
-        "Multi-Factor Equity Models"
+        "Volatility Forecasting",
+        "Intraday Signals",
+        "Execution Research",
+        "Alpha Modeling",
+        "Backtesting",
+        "Implied Volatility",
+        "Real-Time Systems",
+        "Data Engineering",
+        "Microstructure",
+        "Capital Allocation"
       ]
     },
     {
@@ -47,12 +47,23 @@
     },
     {
       "name": "MIT CSAIL, Laboratory for Financial Engineering",
-      "position": "Quantitative Researcher, Asset Market Dynamics",
+      "position": "Quantitative Research Intern, Volatility Modeling Systems",
       "url": "https://lfe.mit.edu/",
       "startDate": "2024-04-01",
-      "endDate": "2024-10",
-      "summary": "I developed advanced time series models using PyTorch, including ARIMA, GARCH, and state-space models, for real-time financial forecasting. I designed machine learning pipelines with LSTM and GRU networks to reduce prediction error and latency, while also researching the integration of stochastic models with neural networks for pricing complex derivatives. I engineered infrastructure for large-scale deployment of these models and collaborated with teams to improve robustness and scalability in volatile market conditions.",
-      "highlights": ["PyTorch", "TensorFlow"]
+      "endDate": "2024-12-31",
+      "summary": "At MIT CSAIL’s Laboratory for Financial Engineering, I conducted research on volatility modeling systems, developing arbitrage-free implied volatility surfaces using SVI and constrained spline methods under illiquid and noisy market regimes. I evaluated robustness of volatility surface inference under stress environments, integrating deep learning models—such as LSTM, GRU, and convolutional architectures in PyTorch—to improve conditional surface estimation. I also designed backtesting frameworks for stochastic volatility models and engineered infrastructure for scalable inference pipelines in Python and C++, contributing to model deployment and diagnostic tooling across research workflows.",
+      "highlights": [
+        "Volatility Surfaces",
+        "SVI Calibration",
+        "Deep Learning",
+        "Neural SDEs",
+        "Stochastic Models",
+        "Time Series",
+        "PyTorch",
+        "C++",
+        "Backtesting",
+        "Diagnostics"
+      ]
     },
     {
       "name": "Deloitte Canada",
