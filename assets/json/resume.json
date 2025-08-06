@@ -17,14 +17,6 @@
   },
   "work": [
     {
-        "name": "Millennium Management LLC",
-        "position": "Senior Index Options Quantitative Researcher",
-        "url": "https://www.mlp.com/",
-        "startDate": "2026-04-01",
-        "endDate": "Present",
-        "summary": "At Millennium Management, I will be leading index options research initiatives within a multi-manager platform, focusing on systematic volatility strategies across SPX, SPXW, and global index derivatives. The role will encompass designing and calibrating high-frequency volatility and correlation forecasts, building execution-optimized spread and dispersion strategies, and developing risk-premia extraction models. I will architect low-latency research-to-production pipelines, integrating real-time data ingestion, feature computation, and signal deployment for live trading. Leveraging multi-threaded C++ for performance-critical components and Python for data science workflows, I will ensure strategies are both research-robust and execution-viable, working closely with PMs, execution quants, and risk managers to translate model outputs into actionable trades, optimize capital deployment, and maintain alignment with portfolio-level risk budgets."
-    },
-    {
       "name": "Squarepoint Capital",
       "position": "Quantitative Researcher, Systematic Volatility",
       "url": "https://www.squarepoint-capital.com/",
