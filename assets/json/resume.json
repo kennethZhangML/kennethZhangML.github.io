@@ -17,23 +17,31 @@
   },
   "work": [
     {
+        "name": "Millennium Management LLC",
+        "position": "Senior Index Options Quantitative Researcher",
+        "url": "https://www.mlp.com/",
+        "startDate": "2026-04-01",
+        "endDate": "Present",
+        "summary": "At Millennium Management, I will be leading index options research initiatives within a multi-manager platform, focusing on systematic volatility strategies across SPX, SPXW, and global index derivatives. The role will encompass designing and calibrating high-frequency volatility and correlation forecasts, building execution-optimized spread and dispersion strategies, and developing risk-premia extraction models. I will architect low-latency research-to-production pipelines, integrating real-time data ingestion, feature computation, and signal deployment for live trading. Leveraging multi-threaded C++ for performance-critical components and Python for data science workflows, I will ensure strategies are both research-robust and execution-viable, working closely with PMs, execution quants, and risk managers to translate model outputs into actionable trades, optimize capital deployment, and maintain alignment with portfolio-level risk budgets."
+    },
+    {
       "name": "Squarepoint Capital",
       "position": "Quantitative Researcher, Systematic Volatility",
       "url": "https://www.squarepoint-capital.com/",
       "startDate": "2025-01-06",
       "endDate": "Present",
-      "summary": "At Squarepoint Capital, I work as a Quantitative Researcher on the Systematic Volatility team, where I lead the development of short-term risk forecasting models and alpha signals for SPXW 0DTE options. My research focuses on predicting open-to-close realized volatility by leveraging intraday features such as futures order flow, auction pressure, and order book imbalance. I’ve built execution-aware signal pipelines and scalable backtests across multi-asset strategies, accounting for signal decay, transaction costs, and cross-sectional performance. In support of live trading, I automate theoretical implied volatility and delta computations, manage real-time data ingestion, and maintain model inference pipelines in Python and C++, with performance-critical components developed in multi-threaded C++. My work is closely integrated with portfolio managers and execution teams to ensure research insights directly inform capital allocation, position sizing, and execution logic under systematic risk constraints.",
+      "summary": "At Squarepoint Capital, I work as a Quantitative Researcher on the Systematic Volatility team, developing short-horizon risk forecasts and alpha signals for SPXW 0DTE options. My research focuses on predicting open-to-close realized volatility by extracting and modeling intraday features such as futures order flow, auction pressure, and order book imbalance. I build execution-aware signal pipelines and scalable multi-asset backtests that account for signal decay, transaction costs, and cross-sectional performance. To support live trading, I automate theoretical IV and delta computations, manage real-time data ingestion, and maintain model inference pipelines in Python and C++, with performance-critical components implemented in multi-threaded C++ using custom data structures. My work is closely integrated with portfolio managers and execution teams to ensure research outputs translate directly into capital allocation, position sizing, and execution logic under systematic risk constraints.",
       "highlights": [
-        "Volatility Forecasting",
-        "Intraday Signals",
-        "Execution Research",
-        "Alpha Modeling",
-        "Backtesting",
-        "Implied Volatility",
-        "Real-Time Systems",
-        "Data Engineering",
-        "Microstructure",
-        "Capital Allocation"
+          "Short-Horizon Realized Volatility Forecasting",
+          "Intraday Feature Engineering from Futures and Order Book Data",
+          "Execution Slippage and Market Impact Modeling",
+          "Volatility Arbitrage Signal Construction",
+          "Scalable Cross-Sectional Backtesting Frameworks",
+          "Implied Volatility Surface Construction and Stress Testing",
+          "Low-Latency, Multi-Threaded Trading System Development in C++",
+          "Real-Time Data Ingestion and Pipeline Orchestration",
+          "Auction Dynamics and Market Microstructure Analysis",
+          "Capital Deployment Optimization under Risk Constraints"
       ]
     },
     {
