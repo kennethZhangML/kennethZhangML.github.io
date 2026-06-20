@@ -2,36 +2,37 @@
 layout: about
 title: about
 permalink: /
-subtitle: "Fuel the code, brew the trades."
 
-profile:
-  align: right
-  image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
+
 
 news: false # includes a list of news items
 # selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
 ---
 
-As a quant, who has spent more hours with coffee than with people, I’ve had plenty of time to ponder the philosophical underpinnings of our financial ecosystems. After countless nights of contemplation and coding, I’ve come to a profound conclusion: it's not gold, nor the dollar, but coffee that truly makes the world go round.
+The market does not ask what a thing is. It asks what one is willing to surrender for it.
 
-Consider the concept of value. What is value, really? In the grand cosmic ledger, the worth of something is determined not just by market forces, but by the void it fills. For many of us navigating the turbulent seas of stock fluctuations and algorithmic models, coffee fills a void like no other. It’s our morning ritual, our afternoon savior, and our late-night muse. If that’s not intrinsic value, I don’t know what is.
+There is a strange honesty in that. Not a moral honesty, nor a beautiful one, but a brutal and primitive kind. Before language decorates desire, before institutions give it legitimacy, before theories pretend to explain it, there is only exchange: the silent admission that something outside ourselves has power over us.
 
-Let's talk risk and reward—a principle as old as time, heavily leaned upon in both life and finance. Every investment, whether in stocks, bonds, or relationships, comes with its own set of risks and expected rewards. Coffee, too, comes with its inherent risks (sleepless nights, an anxious heart) and its undeniable rewards (alertness, the sheer bliss of that first sip). Managing these trade-offs wisely is the essence of being a good quant—and a seasoned coffee drinker.
+To price a thing is not merely to measure it. It is to confess dependence. The object, the asset, the opportunity, the person, the future each becomes visible to us only when it begins to cost us something. We say that markets discover value, but perhaps they discover weakness more precisely. They reveal where we are impatient, where we are afraid, where we are willing to mistake possession for meaning.
+And yet, I do not think this makes markets evil. A market is not a soul. It does not love, resent, forgive, or remember. It is closer to a mirror held up to appetite. If the image is ugly, the fault may not belong to the glass.
 
-Then there's efficiency. In the world of economics, efficiency is the golden calf. We strive to make markets more efficient, to strip away the fat and increase productivity. Coffee is the quintessential catalyst in this relentless pursuit. It cuts through the fog of sleep, sharpens our minds, and optimizes our ability to crunch numbers and spot trends.
+The financier, then, occupies a peculiar moral territory. He studies motion without always asking what moves it. He learns to profit from imbalance, from hesitation, from the small failures of belief that pass between one price and the next. His craft is not built upon certainty, but upon the disciplined suspicion that certainty is usually mispriced.
 
-Finally, let’s ponder dependency. In finance, markets can become overly dependent on indicators and models, just as we can become dependent on our caffeinated crutch. Yet, this dependency speaks to a larger truth about human nature: our need for something stable and predictable in a world that offers neither.
+There is dignity in this suspicion. The world is filled with declarations of permanence: stable currencies, rational agents, efficient institutions, durable empires. But beneath each declaration lies fragility. To see that fragility is not corruption. It is, in some sense, fidelity to reality.
+The danger begins only when perception becomes appetite. When one no longer asks whether an inconsistency should be corrected or merely consumed. When the crack in the structure ceases to be a warning and becomes a business model.
+Perhaps this is the burden of those who live near abstraction. We are tempted to believe that because suffering can be represented, it has been understood; that because risk can be modeled, it has been tamed; that because a number moves, no human thing has moved with it.
 
-So, as I sit here, sipping my fifth espresso of the day, I propose a toast to coffee—the unsung hero of the financial world. It’s more than just a drink; it’s a philosophical reminder of the forces that drive us, the values we hold dear, and the little things that make life—and markets—move. Without it, would the world of finance, or indeed the world at large, function quite as well? I think not.
+But the world is not redeemed by measurement. It is only exposed.
 
-<p align="center">
-  <button onclick="let img = document.getElementById('memeImage'); img.style.display='block'; img.style.opacity=1; this.style.display='none';" style="padding: 10px 20px; font-size: 1em; border: none; border-radius: 5px; background-color: #333; color: #fff; cursor: pointer;">
-  ...
-  </button>
-</p>
+So I remain uneasy, but not ashamed. 
 
-<p align="center">
-  <img id="memeImage" src="assets/img/meme.png" alt="Centered Image" style="max-width: 60%; display: none; opacity: 0; transition: opacity 0.8s ease-in;">
-</p>
+To question legitimacy is not wicked. 
+
+To profit from falsehood without caring whether it remains false: that is something else.
+
+The task, then, is not to escape the market, nor to worship it. 
+
+It is to remember that price is a language, not a god. It can reveal. It can distort. It can discipline. It can seduce.
+
+And like all languages, it tells us as much about the speaker as it does about the world.
