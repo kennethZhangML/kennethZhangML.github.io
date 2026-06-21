@@ -25,9 +25,7 @@ Perhaps this is the burden of those who live near abstraction. We are tempted to
 
 But the world is not redeemed by measurement. It is only exposed.
 
-So I remain uneasy, but not ashamed. 
-
-To question legitimacy is not wicked. 
+So I remain uneasy, but not ashamed. To question legitimacy is not wicked. 
 
 To profit from falsehood without caring whether it remains false: that is something else.
 
